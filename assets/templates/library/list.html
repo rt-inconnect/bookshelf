@@ -1,0 +1,22 @@
+<h3>Manage Libraries</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="library in libraries">
+      <th scope="row">{{$index + 1}}</th>
+      <td>{{library.name}}</td>
+      <td style="width:100px;">
+      	<a class="btn btn-default btn-xs" ui-sref="library.view({ id: library.id })"><i class="glyphicon glyphicon-eye-open"></i></a>
+      	<a class="btn btn-default btn-xs" ui-sref="library.edit({ id: library.id })"><i class="glyphicon glyphicon-edit"></i></a>
+      	<a class="btn btn-default btn-xs" href ng-click="deleteLibrary(library, $index)"><i class="glyphicon glyphicon-trash"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-primary pull-right" ui-sref="library.create">Create Library</a>

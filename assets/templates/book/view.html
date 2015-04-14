@@ -1,0 +1,21 @@
+<h3>Details for {{book.name}}</h3>
+<table class="table">
+  <tr>
+    <td>Book ID</td>
+    <td>{{book.id}}</td>
+  </tr>
+  <tr>
+    <td>Book Name</td>
+    <td>{{book.name}}</td>
+  </tr>
+  <tr>
+    <td>Book Author</td>
+    <td>{{book.author}}</td>
+  </tr>
+  <tr>
+    <td>Book Library</td>
+    <td>{{book.library.name}}</td>
+  </tr>  
+</table>
+<div>
+  <a class="btn btn-primary" ui-sref="book.list">Back to list</a>

@@ -1,0 +1,26 @@
+<h3>Manage Books</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Library</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="book in books">
+      <th scope="row">{{$index + 1}}</th>
+      <td>{{book.name}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.library.name}}</td>
+      <td style="width:100px;">
+      	<a class="btn btn-default btn-xs" ui-sref="book.view({ id: book.id })"><i class="glyphicon glyphicon-eye-open"></i></a>
+      	<a class="btn btn-default btn-xs" ui-sref="book.edit({ id: book.id })"><i class="glyphicon glyphicon-edit"></i></a>
+      	<a class="btn btn-default btn-xs" href ng-click="deleteBook(book, $index)"><i class="glyphicon glyphicon-trash"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-primary pull-right" ui-sref="book.create">Create Book</a>
