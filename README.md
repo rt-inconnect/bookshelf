@@ -6,7 +6,7 @@
 
 - [sails](http://sailsjs.org/) >= 0.11.0
 - node >= 0.10.0
-- 
+
 ## Setup
 
 1. Clone the repository `git clone https://github.com/rt-inconnect/bookshelf.git`
